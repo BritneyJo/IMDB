@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+
+  <%= @player.name %>
+</p>
+
+<p>
+  <b>Date of birth:</b>
+  <%= @player.date_of_birth %>
+</p>
+
+<p>
+  <b>Sex:</b>
+  <%= @player.sex %>
+</p>
+
+<p>
+  <b>Bio:</b>
+  <%= @player.bio %>
+</p>
+
+<p>
+  <b>Films:</b>
+  <%= @player.movies.map(&:name).to_sentence %>
+</p>
+
+
+<%= link_to 'Edit', edit_player_path(@player) %> |
+<%= link_to 'Destroy', @player, method: :delete, data: { confirm: 'Are you sure?' } %> |
+<%= link_to 'Back', players_path %>
